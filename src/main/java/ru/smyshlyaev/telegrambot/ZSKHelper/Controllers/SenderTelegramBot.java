@@ -118,7 +118,7 @@ public class SenderTelegramBot extends TelegramLongPollingBot implements BotComm
                 catch(RegistrationException e){
                     sendHelpText(chatId,e.getMessage());}
                 break;
-            case "/my applications":
+            case "/my statements":
                 List<Message> messages=peopleService.findMessageTelegramId(userId);
                 if(messages.isEmpty()) {
                     sendHelpText(chatId,APP_TEXT);
